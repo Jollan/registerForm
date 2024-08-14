@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-step Register Form</title>
+    <link rel="icon" href="./assets/form.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <form class="form">
+          <div class="step-band">
+            <div class="step one">
+              <h3 class="head">Register</h3>
+              <label class="field" for="name">
+                <span> Name</span>
+                <input
+                  class="name input"
+                  name="name"
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Enter your name"
+                />
+                <span class="name required error">
+                  You must enter a value !
+                </span>
+              </label>
+              <label class="field" for="email">
+                <span>Email</span>
+                <input
+                  class="email input"
+                  name="email"
+                  type="email"
+                  id="email"
+                  required
+                  email
+                  placeholder="example@gmail.com"
+                />
+                <span class="email required error">
+                  You must enter a value !
+                </span>
+                <span class="valid email error"> Enter a valid email ! </span>
+              </label>
+              <button class="button continue" type="button">Continue</button>
+            </div>
+            <div class="step two">
+              <h3 class="head">Which topics you are interested in ?</h3>
+              <span class="topic error">
+                You must choice at least one topic !
+              </span>
+              <div class="options">
+                <div class="option">
+                  <input
+                    class="topic"
+                    type="checkbox"
+                    value=" Software Development"
+                    id="development"
+                    hidden
+                  />
+                  <label class="input label" for="development">
+                    Software Development
+                  </label>
+                </div>
+                <div class="option">
+                  <input
+                    class="topic"
+                    type="checkbox"
+                    value="User Experience"
+                    id="ux"
+                    hidden
+                  />
+                  <label class="input label" for="ux"> User Experience </label>
+                </div>
+                <div class="option">
+                  <input
+                    class="topic"
+                    type="checkbox"
+                    value="Graphic Design"
+                    id="design"
+                    hidden
+                  />
+                  <label class="input label" for="design">
+                    Graphic Design
+                  </label>
+                </div>
+              </div>
+              <button class="button continue" type="button">Continue</button>
+            </div>
+            <div class="step three">
+              <h3 class="head">Summary</h3>
+              <div class="info">
+                <p>Name: <span class="info-name"></span></p>
+                <p>Email: <span class="info-email"></span></p>
+              </div>
+              <div class="topics">
+                <div class="title">Topics:</div>
+                <ul class="list"></ul>
+              </div>
+              <button class="button confirm" type="button">Confirm</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="stepper">
+        <span class="text"></span>
+        <div class="stepper-button">
+          <div class="dot circle">
+            <div class="circle"></div>
+          </div>
+          <div class="dot circle">
+            <div class="circle"></div>
+          </div>
+          <div class="dot circle">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
